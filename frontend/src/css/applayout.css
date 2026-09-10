@@ -1,0 +1,176 @@
+.floatingBookingBtn {
+  position: fixed;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  background: #b78b35;
+  color: white;
+  border: none;
+  min-width: 150px;
+  padding: 14px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(49, 33, 12, 0.25);
+}
+
+.bookingOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  z-index: 10000;
+}
+
+.bookingModal {
+  background: white;
+  width: min(500px, 100%);
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  animation: bookingModalIn 0.18s ease-out;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.bookingModal h2 {
+  margin: 0;
+  padding-right: 32px;
+  color: #2b241c;
+  font-size: 28px;
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.bookingForm input,
+.bookingForm select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.bookingForm button {
+  padding: 12px;
+  background: #b78b35;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bookingThankYou {
+  text-align: center;
+}
+
+.bookingThankYouIcon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px auto 16px;
+
+  border-radius: 50%;
+  background: #b78b35;
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.bookingThankYou p {
+  margin: 16px 0 10px;
+  color: #2b241c;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bookingThankYou span {
+  display: block;
+  color: #72685c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bookingThankYouActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.bookingThankYouActions button {
+  flex: 1;
+  padding: 12px;
+
+  border: none;
+  border-radius: 6px;
+  background: #b78b35;
+  color: #ffffff;
+
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bookingThankYouActions .secondaryBookingBtn {
+  border: 1px solid #b78b35;
+  background: #ffffff;
+  color: #8a6620;
+}
+
+@keyframes bookingModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 520px) {
+  .floatingBookingBtn {
+    bottom: 18px;
+    width: calc(100% - 36px);
+  }
+
+  .bookingModal {
+    padding: 26px 20px 22px;
+  }
+
+  .bookingModal h2 {
+    font-size: 24px;
+  }
+
+  .bookingThankYouActions {
+    flex-direction: column;
+  }
+}

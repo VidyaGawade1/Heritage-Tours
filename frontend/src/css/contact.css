@@ -1,0 +1,299 @@
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contactPage {
+  background: #f8f1e3;
+  color: #29221a;
+
+  --contact-hero-height: 354px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.contactHero {
+  min-height: var(--contact-hero-height);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background:
+    linear-gradient(
+      rgba(41, 34, 26, 0.75),
+      rgba(41, 34, 26, 0.75)
+    ),
+    url("/img/contact/banner.webp");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #fffaf0;
+}
+
+.contactHero h1 {
+  margin-bottom: 15px;
+
+  font-family: Georgia, serif;
+
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.contactHero p {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: rgba(255, 250, 240, 0.85);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FORM + INFO
+========================= */
+
+.contactContainer {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 40px;
+
+  padding: 80px 8%;
+}
+
+.contactForm,
+.contactInfo {
+  background: #fffaf0;
+
+  padding: 40px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contactForm h2,
+.contactInfo h2 {
+  margin-bottom: 25px;
+
+  font-family: Georgia, serif;
+
+  font-size: 34px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d8c7a7;
+
+  border-radius: 6px;
+
+  background: #fff;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.contactForm input:focus,
+.contactForm select:focus,
+.contactForm textarea:focus {
+  border-color: #b78b35;
+}
+
+.contactForm textarea {
+  resize: vertical;
+}
+
+.contactForm button {
+  padding: 15px;
+
+  background: #b78b35;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.contactForm button:hover {
+  background: #29221a;
+}
+
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.infoBox {
+  margin-bottom: 25px;
+}
+
+.infoBox h4 {
+  margin-bottom: 8px;
+
+  color: #b78b35;
+
+  font-size: 18px;
+}
+
+.infoBox p {
+  color: #5f5549;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.contactMap {
+  padding: 0 8% 80px;
+}
+
+.contactMap iframe {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 10px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   BOOKING CTA
+========================= */
+
+.bookingSection {
+  padding: 80px 20px;
+
+  text-align: center;
+
+  background: #29221a;
+
+  color: #fffaf0;
+}
+
+.bookingSection h2 {
+  margin-bottom: 15px;
+
+  font-family: Georgia, serif;
+
+  font-size: 48px;
+}
+
+.bookingSection p {
+  max-width: 650px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,0.8);
+
+  line-height: 1.7;
+}
+
+.bookingButton {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  padding: 14px 24px;
+
+  background: #b78b35;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.bookingButton:hover {
+  background: #d09c2c;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .contactHero h1 {
+    font-size: 48px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .contactHero {
+    padding: 80px 20px;
+  }
+
+  .contactHero h1 {
+    font-size: 38px;
+  }
+
+  .contactForm,
+  .contactInfo {
+    padding: 25px;
+  }
+
+  .contactForm h2,
+  .contactInfo h2 {
+    font-size: 28px;
+  }
+
+  .bookingSection h2 {
+    font-size: 34px;
+  }
+
+}

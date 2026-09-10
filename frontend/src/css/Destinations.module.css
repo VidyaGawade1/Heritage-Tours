@@ -1,0 +1,290 @@
+.page {
+  min-height: 100vh;
+  background: #f8f1e3;
+  color: #2b241c;
+
+  --destinations-hero-height: 395px;
+  --destinations-card-image-height: 225px;
+}
+
+.hero {
+  min-height: var(--destinations-hero-height);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 25px;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(43, 36, 28, 0.58),
+      rgba(43, 36, 28, 0.58)
+    ),
+    url("/img/destinations/hero.webp");
+  background-size: cover;
+  background-position: center;
+
+  color: #fffaf0;
+}
+
+.hero > p,
+.heading p {
+  margin: 0 0 10px;
+
+  color: #d8b66a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+}
+
+.hero > span {
+  display: block;
+  max-width: 680px;
+  margin: auto;
+
+  color: rgba(255, 250, 240, 0.75);
+  line-height: 1.7;
+}
+
+.packages {
+  width: min(1120px, calc(100% - 40px));
+  margin: auto;
+  padding: 75px 0 90px;
+}
+
+.heading {
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 5vw, 50px);
+  font-weight: 500;
+}
+
+.heading > span {
+  color: #8b7d6d;
+  font-size: 13px;
+}
+
+.filters {
+  margin-bottom: 35px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 10px 18px;
+
+  border: 1px solid #dfcfad;
+  border-radius: 30px;
+
+  background: #fffaf0;
+  color: #2b241c;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.filters .activeFilter {
+  border-color: #b78b35;
+  background: #b78b35;
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  overflow: hidden;
+
+  border: 1px solid #dfcfad;
+  border-radius: 9px;
+
+  background: #fffaf0;
+  box-shadow: 0 8px 25px rgba(52, 39, 25, 0.09);
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 18px 40px rgba(52, 39, 25, 0.16);
+  transform: translateY(-7px);
+}
+
+.cardImage {
+  position: relative;
+  height: var(--destinations-card-image-height);
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.06);
+}
+
+.duration,
+.category {
+  position: absolute;
+  top: 14px;
+
+  padding: 7px 10px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.duration {
+  left: 14px;
+  background: #fffaf0;
+  color: #2b241c;
+}
+
+.category {
+  right: 14px;
+  background: rgba(43, 36, 28, 0.8);
+  color: #fffaf0;
+}
+
+.cardContent {
+  padding: 22px;
+}
+
+.location {
+  color: #a97425;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cardContent h3 {
+  margin: 9px 0 13px;
+
+  color: #2b241c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.rating > span {
+  color: #b78b35;
+  letter-spacing: 1px;
+}
+
+.rating strong {
+  font-size: 13px;
+}
+
+.rating small {
+  color: #887b6c;
+}
+
+.cardBottom {
+  margin-top: 20px;
+  padding-top: 18px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+
+  border-top: 1px solid #e4d9c2;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.price small,
+.price span {
+  color: #827566;
+  font-size: 10px;
+}
+
+.price strong {
+  color: #2b241c;
+  font-size: 20px;
+}
+
+.viewButton {
+  padding: 11px 17px;
+  border-radius: 5px;
+
+  background: #b78b35;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.viewButton:hover {
+  background: #8c621f;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardImage {
+    --destinations-card-image-height: 245px;
+  }
+}
