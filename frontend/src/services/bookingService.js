@@ -1,5 +1,4 @@
 import axios from "axios";
-
 const API_URL =
   "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/bookings";
 
