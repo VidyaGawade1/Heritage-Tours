@@ -70,7 +70,7 @@ export default function AddTour() {
     formData.append("image", tour.image);
 
     try {
-      await axios.post("http://localhost:8088/api/tours", formData);
+      await axios.post("http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/tours", formData);
 
       alert("Tour Added Successfully");
       setTour(initialTour);

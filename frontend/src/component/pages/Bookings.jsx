@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Admin.css";
 
-const BOOKINGS_API_URL = "http://localhost:8088/api/bookings";
+const BOOKINGS_API_URL = "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/bookings";
 
 function Bookings() {
   const [bookings, setBookings] = useState([]);

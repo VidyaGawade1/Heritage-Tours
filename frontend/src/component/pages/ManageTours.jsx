@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Admin.css";
 
-const API_BASE_URL = "http://localhost:8088";
+const API_BASE_URL = "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com";
 const UPLOADS_URL = `${API_BASE_URL}/uploads`;
 
 const getTourImageUrl = (image) => {

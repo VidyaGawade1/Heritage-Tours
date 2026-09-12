@@ -12,7 +12,7 @@ function AdminUsers() {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8088/api/users"
+        "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/users"
       );
       setUsers(response.data);
     } catch (error) {

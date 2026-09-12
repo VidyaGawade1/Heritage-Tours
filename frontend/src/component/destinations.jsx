@@ -171,7 +171,7 @@ export default function Destinations() {
     try {
 
       const response = await axios.get(
-        "http://localhost:8088/api/tours"
+        "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/tours"
       );
 
       console.log(
@@ -242,7 +242,7 @@ export default function Destinations() {
     */
 
     if (tour.image) {
-      return `http://localhost:8088/uploads/${tour.image}`;
+      return `http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/uploads/${tour.image}`;
     }
 
     /*
