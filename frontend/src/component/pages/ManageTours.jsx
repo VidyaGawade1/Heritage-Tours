@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Admin.css";
 
-const API_BASE_URL = "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com";
+const API_BASE_URL = "https://heritagetoursapp.duckdns.org";
 const UPLOADS_URL = `${API_BASE_URL}/uploads`;
 
 const getTourImageUrl = (image) => {

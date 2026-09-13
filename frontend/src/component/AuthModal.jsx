@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/AuthModal.css";
-const USERS_API_URL = "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/users";
+const USERS_API_URL = "https://heritagetoursapp.duckdns.org/api/users";
 const USER_LOGIN_URL = `${USERS_API_URL}/login`;
 const USER_REGISTER_URL = `${USERS_API_URL}/register`;
 

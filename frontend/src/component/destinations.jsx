@@ -170,9 +170,9 @@ export default function Destinations() {
 
     try {
 
-      const response = await axios.get(
-        "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/tours"
-      );
+     const response = await axios.get(
+  "https://heritagetoursapp.duckdns.org/api/tours"
+);
 
       console.log(
         "Admin tours:",
@@ -242,8 +242,8 @@ export default function Destinations() {
     */
 
     if (tour.image) {
-      return `http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/uploads/${tour.image}`;
-    }
+  return `https://heritagetoursapp.duckdns.org/uploads/${tour.image}`;
+}
 
     /*
     DEFAULT IMAGE

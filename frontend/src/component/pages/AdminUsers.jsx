@@ -11,9 +11,9 @@ function AdminUsers() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get(
-        "http://heritage-backend-env.eba-ktrdzivs.us-east-1.elasticbeanstalk.com/api/users"
-      );
+     const response = await axios.get(
+  "https://heritagetoursapp.duckdns.org/api/users"
+);
       setUsers(response.data);
     } catch (error) {
       console.error(error);
