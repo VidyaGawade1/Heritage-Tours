@@ -67,7 +67,9 @@ export default function AddTour() {
     formData.append("price", tour.price);
     formData.append("duration", tour.duration);
     formData.append("description", tour.description);
-    formData.append("image", tour.image);
+    if (tour.image instanceof File) {
+      formData.append("image", tour.image);
+    }
 
     try {
       await axios.post("https://heritagetoursapp.duckdns.org/api/tours", formData);
@@ -87,7 +89,12 @@ export default function AddTour() {
       }
     } catch (error) {
       console.error(error);
-      alert("Failed to Add Tour");
+      const message =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        "Failed to Add Tour";
+
+      alert(message);
     }
   };
   return (

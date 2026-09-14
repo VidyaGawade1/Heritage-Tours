@@ -19,7 +19,8 @@ public class CorsConfig {
                                 "http://localhost:5173",
                                 "https://main.d16bhmgzx6b3n9.amplifyapp.com"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE");
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*");
             }
         };
     }
