@@ -31,7 +31,7 @@ export default function Navbar({ loggedInUser, onLoginClick, onLogout }) {
 
   return (
     <>
-      <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
+      <header className={`site-navbar ${scrolled ? "site-navbar--scrolled" : ""}`}>
         <nav className="navbar__container">
 
           {/* Logo */}

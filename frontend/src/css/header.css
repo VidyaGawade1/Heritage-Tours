@@ -7,16 +7,12 @@ body {
 }
 
 /* Header */
-.navbar {
-  position: fixed;
+.site-navbar {
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
-  background: #ffffff;
-
-
-  width: 100%;
   padding: 20px 0;
 
   background: #ffffff;
@@ -27,7 +23,7 @@ body {
     box-shadow 0.3s ease;
 }
 
-.navbar--scrolled {
+.site-navbar--scrolled {
   padding: 13px 0;
   box-shadow: 0 5px 20px rgba(50, 37, 20, 0.1);
 }
@@ -249,7 +245,7 @@ body {
 
 /* Tablet and mobile */
 @media (max-width: 850px) {
-  .navbar {
+  .site-navbar {
     padding: 12px 0;
   }
 
